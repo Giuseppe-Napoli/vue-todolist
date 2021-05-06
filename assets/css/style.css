@@ -1,0 +1,123 @@
+/* GLOBAL */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Itim', cursive;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+.wrapper{
+  width: 70%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.logo,
+.add-list{
+  text-align: center;
+}
+
+.add-list h4{
+  color: red;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  animation-name: head;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* animazione */
+@keyframes head {
+  0% {font-size:200%; opacity:1;}
+  25% {font-size:100%; opacity:0.7;}
+  50% {font-size:200%; opacity:1;}
+  75% {font-size:100%; opacity:0.7;}
+  100% {font-size:200%;opacity:1;}
+}
+
+.add-list input{
+  padding: 10px 30px;
+  border: none;
+  margin-right: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 5px#001533;
+  outline: none;
+}
+
+.add-list button{
+  padding: 10px 20px;
+  background-color: white;
+  color: #00E165;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  margin-right: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 5px #001533;
+  cursor: pointer;
+}
+
+
+.logo img{
+  width: 400px;
+  box-shadow: 1px 2px 5px #001533;
+  padding :0 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.list{
+  padding: 30px;
+  width: 70%;
+  background-image: url(../img/images.jpg);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px #001533;
+  margin: 50px auto;
+}
+
+.list ul li{
+  list-style: none;
+  font-size: 22px;
+  color: #001533;
+  text-transform: uppercase;
+  border-bottom: 1px solid darkgrey;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.list ul li:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.list ul li:last-child{
+  border: none;
+}
+
+.list ul li i{
+  float: right;
+  color: darkgray;
+
+  cursor: pointer;
+}
+
+.list ul li i:hover{
+  color: red;
+}
+
+.list ul li.checked{
+  text-decoration: line-through;
+  color: #00E165;
+
+}

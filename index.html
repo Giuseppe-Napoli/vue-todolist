@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="app" class="container">
+
+    <div class="wrapper">
+
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="log">
+      </div>
+
+      <div class="add-list">
+        <h4 v-if=alertActive>ATTENZIONE! Testo troppo corto</h4>
+        <input type="text" v-model="testo" @keyup.enter="addMsg()" placeholder="Digita testo">
+        <button @click="addMsg()">Aggiungi</button>
+      </div>
+
+      <div class="list">
+        <ul>
+
+          <li 
+            v-for='(messaggio,index) in messaggi'
+            :class=" (messaggio.checked) ? 'checked' : null"
+            @click="messaggio.checked =! messaggio.checked">
+            {{messaggio.messaggio}}
+            
+            <i 
+              class="fas fa-times"
+              @click.stop="clearMsg(index)">
+            </i>
+
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html >
